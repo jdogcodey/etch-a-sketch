@@ -8,6 +8,18 @@ l = 1;
 const xContainerDivs = [];
 const yBoxDivs = [];
 
+const resetButton = document.createElement('button');
+    resetButton.textContent = 'Reset';
+    resetButton.addEventListener('click', function() {
+        let boxes = document.getElementsByClassName('box');
+        for (let m = 0; m<boxes.length; m++) {
+            boxes[m].style.backgroundColor = "transparent";
+        };
+    });
+    document.body.appendChild(resetButton);  
+
+const noOfBoxButton = document.createElement('button');
+
 for (i = 1; i <= 16; i++) {
     console.log(i)
     xContainerDivs[i] = document.createElement('div');
