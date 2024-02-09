@@ -25,7 +25,7 @@ for (i = 1; i <= 16; i++) {
 window.addEventListener("DOMContentLoaded", function() {
     for (k = 1; k <= 16; k++) {
         for (l = 1; l <= 16; l++) {
-        document.getElementById(`box${k}container${l}`).addEventListener('mouseover', function () {
+        document.getElementById(`box${k}container${l}`).addEventListener('mouseenter', function () {
             console.log(this.id);
             this.style.backgroundColor = 'red';
         });
