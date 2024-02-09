@@ -1,12 +1,14 @@
 html, body {
-    height: 500px;
-    width: 500px;
+    height: 520px;
+    width: 520px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
+    background-color: black;
+    margin-top: 20px;
 }
 
 div {
@@ -25,6 +27,8 @@ div {
     align-self: center;
     margin-left: auto;
     margin-right: auto;
+    height: 500px;
+    width: 500px;
 }
 
 .box {
@@ -32,3 +36,16 @@ div {
     flex: auto;
 }
 
+button {
+    background: 'black';
+    width: 200px;
+    height: 40px;
+    margin: 20px;
+    justify-self: center;
+    padding: 10px;
+    border: 4px;
+}
+
+#div1 {
+    margin: 20px;
+}

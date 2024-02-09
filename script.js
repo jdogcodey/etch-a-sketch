@@ -1,18 +1,24 @@
-const container = document.querySelector(`#container`);
-
 let i = 1;
 let j = 1;
 let k = 1;
 let l = 1;
 let m = 0;
 let n = 0;
-
-let userChosenNumber = 16; 
-
+let userChosenNumber = 16;
 let userInput = 0;
-
 const xContainerDivs = [];
 const yBoxDivs = [];
+
+const container = document.querySelector(`#container`);
+
+const div1 = document.createElement('div');
+div1.id = 'div1';
+document.body.appendChild(div1);
+
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+};
 
 function resetter() {
     let boxes = document.getElementsByClassName('box');
@@ -24,7 +30,8 @@ function resetter() {
 const resetButton = document.createElement('button');
     resetButton.textContent = 'Reset';
     resetButton.addEventListener('click', resetter);
-document.body.appendChild(resetButton);
+    resetButton.classList.add('button');
+div1.appendChild(resetButton);
 
 let playRound 
 (playRound = function playAgain() {
@@ -52,7 +59,8 @@ window.addEventListener("DOMContentLoaded", function () {
         for (l = 1; l <= userChosenNumber; l++) {
         document.getElementById(`box${k}container${l}`).addEventListener('mouseenter', function () {
             // console.log(this.id);
-            this.style.backgroundColor = 'red';
+            let color = random_rgba();
+            this.style.backgroundColor = color;
         });
         };
         };
@@ -77,5 +85,5 @@ window.addEventListener("DOMContentLoaded", function () {
         resetter ();
         makeItRed();
     });
-document.body.appendChild(noOfBoxButton);
+div1.appendChild(noOfBoxButton);
 });
