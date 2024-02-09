@@ -1,11 +1,22 @@
+html, body {
+    height: 100%;
+}
+
 div {
     display: flex;
+    align-items: stretch;
+    align-content: stretch;
+    flex: auto;
+    gap: 0px;
+    height: 100%;
 }
 
 .container {
     flex-direction: column;
+    flex: auto;
 }
 
 .box {
     flex-direction: row;
+    flex: auto;
 }
